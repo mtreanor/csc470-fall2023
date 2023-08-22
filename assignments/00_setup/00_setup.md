@@ -5,6 +5,8 @@ Download and install [Unity LTS Release 2022.3.7f1](https://unity.com/releases/e
 
 ![Try this](./install_1.png)
 And then make sure to
-![Ret that](./install_2.png)
+![Try that](./install_2.png)
+
+<img src="./install_1.png" width="100" />
 
 After all is done it should work.
