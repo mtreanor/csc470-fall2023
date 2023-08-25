@@ -1,17 +1,4 @@
-
-
-## Unity
-Download and install [Unity LTS Release 2022.3.7f1](https://unity.com/releases/editor/qa/lts-releases). You 
-
-![Try this](./install_1.png)
-And then make sure to
-![Try that](./install_2.png)
-
-<img src="./install_1.png" align="right" width="100" />
-
-After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. 
-
-## Steps
+# Setting up your Unity Development Environment
 
 ## Unity
 1. Download and install [Unity Hub](https://unity.com/download).
@@ -37,7 +24,7 @@ After all is done it should work. After all is done it should work. After all is
 1. Locate the repository folder on your computer, and add two folders to it: 'assignments' and 'releases'
 1. Commit your changes to the repository "locally" by typing a brief summary of what you did in the Summary field (e.g. "Created the repository for csc470") and click "Commit to master" (this should be on the bottom left of the window).
 1. On the top/middle region of the screen, click "Publish repository"
-1. In the future, in order to upload your changes to Github, you will always need to "commit" and then "publish" your changes to the repository every time you make a change to your project. This is how you will submit your work for grading.
+1. In the future, in order to upload your changes to Github you will go through a similar process as what you did in the last two steps. You will need to first "commit" your changes, and then you will press the button labeled "Push origin" (located at the same place as the "Publish repository" button). This is how you will submit your work for grading.
 
 ## Setting up your Github repository for submitting work
 - Go to your web browser, log into Github.com, and find the repository you just created and posted (click the repositories tab).
@@ -55,3 +42,19 @@ After all is done it should work. After all is done it should work. After all is
     - You will need to do this for every Unity project! Tons of the errors I encounter are because students forget to do this.
 1. Remember to switch your build settings to WebGL.
 1. You might as well set the aspect ratio for your game to 16:9 now, as well.
+
+
+
+
+<!--
+## Unity
+Download and install [Unity LTS Release 2022.3.7f1](https://unity.com/releases/editor/qa/lts-releases). You 
+
+![Try this](./install_1.png)
+And then make sure to
+![Try that](./install_2.png)
+
+<img src="./install_1.png" align="right" width="100" />
+
+After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. After all is done it should work. 
+-->
