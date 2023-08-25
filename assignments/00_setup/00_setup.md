@@ -37,6 +37,7 @@ After all is done it should work. After all is done it should work. After all is
 1. Locate the repository folder on your computer, and add two folders to it: 'assignments' and 'releases'
 1. Commit your changes to the repository "locally" by typing a brief summary of what you did in the Summary field (e.g. "Created the repository for csc470") and click "Commit to master" (this should be on the bottom left of the window).
 1. On the top/middle region of the screen, click "Publish repository"
+1. In the future, in order to upload your changes to Github, you will always need to "commit" and then "publish" your changes to the repository every time you make a change to your project. This is how you will submit your work for grading.
 
 ## Setting up your Github repository for submitting work
 - Go to your web browser, log into Github.com, and find the repository you just created and posted (click the repositories tab).
