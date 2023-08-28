@@ -38,9 +38,8 @@
     - Name your project as is specified in the assignment (remember, everything is case sensitive)
     - Set the project's location to the `assignments` folder within your local repository for this class (i.e. the folder on your computer).
 1. For each project, remember to create .gitignore file with the contents located [here](https://raw.githubusercontent.com/github/gitignore/main/Unity.gitignore) and to place the file in the root directory of the Unity project.
-    - Remember to save the file as exactly ".gitignore" (i.e. no file extension such as .txt or .md).
+    - Remember to save the file as exactly ".gitignore" (i.e. no file extension such as .txt or .md). If you are using Windows, you may need to open the file in Notepad and save it as "All Files" instead of "Text Documents". If you are using Mac, you may need to open the file in TextEdit and save it as "Plain Text" instead of "Rich Text".
     - You will need to do this for every Unity project! Tons of the errors I encounter are because students forget to do this.
 1. Remember to switch your build settings to WebGL.
+1. Remember to add your Unity scene to the build settings before you build your project.
 1. You might as well set the aspect ratio for your game to 16:9 now, as well.
-
-
