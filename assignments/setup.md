@@ -15,7 +15,7 @@
 ## Create your repository for the class
 1. Open Github desktop and log in (you may need to go to Preferences->Accounts)
 1. Add a repository for the exercise
-    - Name as is specified in the assignment (remember, everything is case sensitive)
+    - Name the repository exactly "csc470-fall2023" (or "csc670-fall2023" if you are in the graduate section). **Make 100% certain you are using that exact name!**
     - Make sure the repository is marked as "public"
     - For Local Path put it wherever you like to keep your class files on your computer
     - Ignore the other setting options
