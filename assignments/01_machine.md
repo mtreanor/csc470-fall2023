@@ -1,4 +1,4 @@
-# Assignmemnt 1: Rube Goldberg Machine
+# Assignment 1: Rube Goldberg Machine
 Create a simple “Rube Goldberg Machine” out of simple 3d shapes with custom colors/materials, at least two 3d models from http://poly.pizza, and the RigidBody component. While the primary purpose of this small exercise is for you to practice using the Unity user interface, you can still make some fun/hilarious stuff, so have fun! Also, while future exercises will be done with a partner, do this one individually.
 
 ## Topics we covered that you should demonstrate ability with
