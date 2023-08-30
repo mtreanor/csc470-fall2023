@@ -11,13 +11,15 @@ Create a simple “Rube Goldberg Machine” out of simple 3d shapes with custom 
 - How to make the in game camera show a solid color background rather than the default skybox.
 
 ## Turning in your assignment
-First, BE EXTRA REALLY SUPER CERTAIN THAT YOUR GITIGNORE FILE IS CONFIGURED CORRECTLY AND PLACED AT THE ROOT OF YOUR UNITY PROJECT FOLDER (you need to do this every time you create a new Unity project).
+You will be turning in your assignment by pushing both your Unity project to your Github as well as a WebGL build of your game.
 
-### Building your Project for the Web
-- Open the Build Settings (File > Build Settings...)
+Before you do anything, BE EXTRA REALLY SUPER CERTAIN THAT YOUR GITIGNORE FILE IS PLACED AT THE ROOT OF YOUR UNITY PROJECT FOLDER (you need to do this every time you create a new Unity project).
+
+### Building your game for the Web
+- In Unity, open the Build Settings (File > Build Settings...)
 - Click the Add Open Scenes button
 - Select "WebGL" and then click the "Switch Platform" button
-Remember to modify your player settings (disable compression, turn off auto WebGL graphics or whatever if necessary.)
+Remember to modify your player settings (remember to disable compression in the Publishing settings - this is described in more detail on the setup page).
 - Click the "Build" button
-- When it asks you where you want to put your build, create a folder titled "01_machine" in your "games" folder located in your main repository folder ("csc470-fall2023"). Once you do this, it will take several minutes to build your game, and then you can commit and push your build. After five or so minutes it should be playable at: http://YOUR_GITHUB_USERNAME.github.io/csc470-fall2023/games/01_machine
+- When it asks you where you want to put your build, create a folder titled "01_machine" in your "games" folder located in your main repository for the class (csc470-fall2023). Once you do this, it will take several minutes to build your game, and then you can commit and push your build. After five or so minutes it should be playable at: http://YOUR_GITHUB_USERNAME.github.io/csc470-fall2023/games/01_machine
 - If it doesn't work, you may need to take a closer look at the setup instructions.
