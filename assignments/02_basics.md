@@ -2,7 +2,7 @@
 
 ## Description
 - Create at least 2 **prefabs** that have their origin at their bottom center. This demonstrates that you understand the hierarchy.
-- At runtime, generate at least 10 instances of each prefab. See (this example)[https://github.com/mtreanor/csc470-fall2023/blob/main/examples/Basics/Assets/WorldGenerator.cs] for help.
+- At runtime, generate at least 10 instances of each prefab. See [this example](https://github.com/mtreanor/csc470-fall2023/blob/main/examples/Basics/Assets/WorldGenerator.cs) for help.
     - For one of then, they should be placed randomly in the scene. 
     - For the other, they should be placed in a deliberate pattern. In other words, a row, or a grid, or a circle, or something else.
 - Given some input event (a key press, a mouse click, etc.), some movement should be initiated that interacts with at least one of the prefabs.
