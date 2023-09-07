@@ -38,7 +38,7 @@ public class WorldGenerator : MonoBehaviour
         Vector3 pos = new Vector3(x, y, z);
         GameObject rain = Instantiate(rainPrefab, pos, Quaternion.identity);
         // Every visible object has a renderer, and so does the instantiated rain
-        // prefab. Below, we grab the renderer component on the instnatiated rain
+        // prefab. Below, we grab the renderer component on the instantiated rain
         // object, and then assign a random color to it.
         Renderer rainRend = rain.GetComponent<Renderer>();
         rainRend.material.color = new Color(Random.value, Random.value, Random.value);
