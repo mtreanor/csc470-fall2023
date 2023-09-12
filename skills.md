@@ -1,0 +1,17 @@
+# Skills So Far
+- Basic editor camera movement
+- Created Primitive 3D GameObjects
+- GameObject hierarchies
+    - Changing a GameObject's origin via parenting
+- Prefabs
+- Creating Prefabs at runtime
+- Applying Physics to GameObject's via Rigidbody and Collider components
+    - Applying forces
+    - Turning off and on gravity
+- Using Input to control GameObjects (keyboard so far) via the "old" input system
+- Changing the camera's background color (removing default skybox)
+- Creating and applying Materials to change color
+- Loading in 3d models from poly.pizza 
+- Using Time.deltaTime to ensure smooth linear movement
+- Moving a GameObject based on its forward direction 
+- Local vs global
