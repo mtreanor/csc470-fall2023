@@ -7,5 +7,5 @@
 
 ## Resources
 Dates | Topic | Sample Project
------ | ----- | -----
+---------------- | ----- | -----
 9-12-23 | Creating prefabs with origin at the bottom, instanitating objects in a row, calling a function on collision, applying forces to rigidbodies | [link](examples/Dominos/Assets)
