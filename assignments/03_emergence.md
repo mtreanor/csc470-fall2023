@@ -3,6 +3,8 @@
 ## Description
 Create a small game that features [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in some interesting way.
 
+The first challenge will be getting Game of Life working at all. After that, you will need to figure out how to make it fun. You can do this by adding other elements to the game, or by modifying the rules of the game.
+
 Here are some ideas:
 
 - Make the grid the floor, and when a cell becomes alive, have the ground rise up (potentially launching the player in the air).
@@ -10,6 +12,12 @@ Here are some ideas:
 - Give the grid a memory and change the color of each cell based on various relationships.
 - Detect certain patterns and have that spawn different types of entities.
 - Use the Game of Life to generate terrains (maybe even modify the rules and Cells to support states other than alive or !alive).
+
+## Graduate Student Assignments
+Essentially the same as the undergraduate assignment, but have your game feature a one dimensional cellular automata with a configurable rule instead. In other words, something like [this](https://mathworld.wolfram.com/ElementaryCellularAutomaton.html) or [this](https://en.wikipedia.org/wiki/Cellular_automaton#List_of_automata).
+
+### Note
+You might think the 2D is harder because of the extra dimension, but implementing a one dimensional CA with a configurable rule is actually more tricky.
 
 ## Turning in your assignment
 You will be turning in your assignment by pushing both your Unity project to your Github as well as a WebGL build of your game.
