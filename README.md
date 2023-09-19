@@ -7,6 +7,6 @@
 1. [Emergence](assignments/03_emergence.md)
 
 ## Resources
-Dates | Topic | Sample Project
+Week/Topic | Topic | Sample Project
 ---------------- | ----- | -----
-Dominos | Creating prefabs with origin at the bottom, instanitating objects in a row, calling a function on collision, applying forces to rigidbodies, changing an object's color with HSV color space, generators of generators, using sine the function | [link](examples/Dominos/Assets)
+Week 3 / Dominos | Creating prefabs with origin at the bottom, instanitating objects in a row, calling a function on collision, applying forces to rigidbodies, changing an object's color with HSV color space, generators of generators, using sine the function | [link](examples/Dominos/Assets)
