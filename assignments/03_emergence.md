@@ -1,5 +1,8 @@
 # Assignment 3: The Emergence Game
 
+## Due
+Friday September 29th at 12:55pm.
+
 ## Description
 Create a small game that features [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in some interesting way.
 
