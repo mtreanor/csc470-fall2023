@@ -6,6 +6,7 @@ public class DominoScript : MonoBehaviour
 {
     public int id;
 
+    public DominoGenerator parentGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class DominoScript : MonoBehaviour
     }
 
     // This function is called by Unity when the Physics object collides with
-    // something (because Domino has a Rigidbody).
+    // a collider (because Domino has a Rigidbody).
     private void OnCollisionEnter(Collision collision)
     {
         // The parameter 'collision' is a data structure provided by Unity
@@ -35,7 +36,8 @@ public class DominoScript : MonoBehaviour
             // The Color.HSVToRGB function wants three values between 0 and 1.
             // By dividing the number by 50 and applying the modulus operator
             // we get a looping number between 0 and 1 every 50 id numbers.
-            rend.material.color = Color.HSVToRGB((id / 50f) % 1f, 0.8f, 0.8f);
+            float hue = parentGenerator.hueOffset + id / 50f;
+            rend.material.color = Color.HSVToRGB(hue % 1f, .9f, 0.8f);
         }
     }
 }

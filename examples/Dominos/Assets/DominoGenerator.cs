@@ -13,12 +13,16 @@ public class DominoGenerator : MonoBehaviour
     // This is the distance we will put between each domino we generate.
     float spacing = 0.8f;
 
+    public int index = 50;
+
     GameObject firstDomino;
+
+    public float hueOffset = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < numDominos; i++)
+        for (int i = 0; i < index + 1; i++)
         {
             // Compute a position in front of the generator object at a distance
             // based on the iterator variable and the spacing variable.
@@ -31,6 +35,7 @@ public class DominoGenerator : MonoBehaviour
             // row. We can use this to create interesting effects, like
             // determining what color it should be (see the DominoScript).
             domino.GetComponent<DominoScript>().id = i;
+            domino.GetComponent<DominoScript>().parentGenerator = this;
 
             // If this is the first domino created, store a reference to it in a
             // variable. We can then apply a force to it to start the dominos
@@ -50,7 +55,7 @@ public class DominoGenerator : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Rigidbody rb = firstDomino.GetComponent<Rigidbody>();
-            rb.AddForce(firstDomino.transform.forward * 1000);
+            rb.AddForce(firstDomino.transform.forward * 100);
         }
     }
 }

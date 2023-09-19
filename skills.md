@@ -5,13 +5,17 @@
     - Changing a GameObject's origin via parenting
 - Prefabs
 - Creating Prefabs at runtime
+- Positioning objects via an iterator variable in a loop.
 - Applying Physics to GameObject's via Rigidbody and Collider components
     - Applying forces
     - Turning off and on gravity
 - Using Input to control GameObjects (keyboard so far) via the "old" input system
 - Changing the camera's background color (removing default skybox)
 - Creating and applying Materials to change color
+- Programmatically changing the color of a Material
+    - Using both RGB and the Hue, Saturation, Value (HSV) color spaces
 - Loading in 3d models from poly.pizza 
 - Using Time.deltaTime to ensure smooth linear movement
 - Moving a GameObject based on its forward direction 
-- Local vs global
+- Local vs global modes on editor tools
+- How to have a function run when two game object's collide (via OnCollisionEnter).
