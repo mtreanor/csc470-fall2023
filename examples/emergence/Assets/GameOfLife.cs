@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameOfLife : MonoBehaviour
 {
     public GameObject cellPrefab;
+
+    // Create a 2D array of CellScripts
     CellScript[,] cells;
 
     // Start is called before the first frame update
