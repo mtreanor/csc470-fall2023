@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26f9b9787b8504c51818a230ca3fd40d
+guid: fa3e0809126f44f6f906c033dc55571f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Bold Fashion PERSONAL USE
+  - Demode
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
