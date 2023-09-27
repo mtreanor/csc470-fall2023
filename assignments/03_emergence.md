@@ -6,7 +6,7 @@ Friday September 29th at 12:55pm.
 ## Description
 Create a small game that features [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in some interesting way.
 
-The first challenge will be getting Game of Life working at all. After that, you will need to figure out how to make it fun. You can do this by adding other elements to the game, or by modifying the rules of the game.
+The first challenge will be getting Game of Life working at all. After that, you will need to figure out how to make it fun or more interesting in some way. You can do this by adding other elements to the game, or by modifying the rules of the game.
 
 Here are some ideas:
 

@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void incScore(int howMuch)
     {
         score += howMuch;

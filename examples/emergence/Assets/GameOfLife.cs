@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameOfLife : MonoBehaviour
 {
     public GameObject cellPrefab;
 
     // Create a 2D array of CellScripts
-    CellScript[,] cells;
+    public CellScript[,] cells;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,9 @@ public class GameOfLife : MonoBehaviour
                 // object that contains the information we will be intereated in
                 // (the 'alive' variable.
                 cells[x, y] = cellObj.GetComponent<CellScript>();
+                cells[x, y].x = x;
+                cells[x, y].y = y;
+                cells[x, y].alive = (Random.value < 0.2f);
             }
         }
     }
@@ -41,6 +45,6 @@ public class GameOfLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
