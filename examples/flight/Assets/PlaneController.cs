@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class PlaneController : MonoBehaviour
 {
-    public TMP_Text scoreText;
+    public GameObject basketballPrefab;
 
     int score = 0;
 
@@ -15,52 +14,77 @@ public class PlaneController : MonoBehaviour
     float yRotationSpeed = 10f;
     float zRotationSpeed = 40f;
 
-    float bonusSpeed = 0;
+    Vector3 oldCamPos;
 
     public GameObject cameraObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        UpdateScore(0);
+        GameManager.SharedInstance.UpdateScore(0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // GET INPUT
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
+        // LAUNCH BASKETBALL
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Vector3 inFrontOfPlane = transform.position + transform.forward * 5;
+            GameObject ball = Instantiate(basketballPrefab, inFrontOfPlane, transform.rotation);
+            Rigidbody rb = ball.GetComponent<Rigidbody>();
+            rb.AddForce(ball.transform.forward * 2500);
+        }
+
+        // ROTATE
         float xRotation = vAxis * xRotationSpeed * Time.deltaTime;
         float yRotation = hAxis * yRotationSpeed * Time.deltaTime;
         float zRotation = hAxis * zRotationSpeed * Time.deltaTime;
 
         transform.Rotate(xRotation, yRotation, -zRotation, Space.Self);
 
+        // BOOST
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            bonusSpeed = 20;
+            forwardSpeed += 20;
         }
-        bonusSpeed -= 5 * Time.deltaTime;
-        bonusSpeed = Mathf.Max(0, bonusSpeed);
 
-        gameObject.transform.position += gameObject.transform.forward * Time.deltaTime * (forwardSpeed + bonusSpeed);
+        // GRAVITY
+        forwardSpeed -= transform.forward.y * 15 * Time.deltaTime;
+        forwardSpeed = Mathf.Max(0, forwardSpeed);
 
-        cameraObject.transform.position = transform.position + -transform.forward * 10 + Vector3.up * 5;
+        // Keep us from going underground
+        float terrainY = Terrain.activeTerrain.SampleHeight(transform.position);
+        if (transform.position.y < terrainY)
+        {
+            transform.position = new Vector3(transform.position.x, terrainY, transform.position.z);
+            forwardSpeed -= 100 * Time.deltaTime;
+        }
+
+        // MOVE FORWARD
+        gameObject.transform.position += gameObject.transform.forward * Time.deltaTime * forwardSpeed;
+
+        // CAMERA
+        Vector3 newCamPos = transform.position + -transform.forward * 10 + Vector3.up * 5;
+        if (oldCamPos == null)
+        {
+            oldCamPos = newCamPos;
+        }
+        cameraObject.transform.position = (newCamPos + oldCamPos) / 2f;
         cameraObject.transform.LookAt(transform);
+        oldCamPos = newCamPos;
     }
 
-    void UpdateScore(int amount)
-    {
-        score += amount;
-        scoreText.text = score.ToString();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ring"))
         {
-            UpdateScore(1);
+            GameManager.SharedInstance.UpdateScore(1);
         }
     }
 
