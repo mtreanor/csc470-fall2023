@@ -54,6 +54,7 @@ public class CellScript : MonoBehaviour
     {
         int alive = 0;
 
+        // NOTE: This will crash if you clock on any edge cells!
         for (int xIndex = x - 1; xIndex <= x + 1; xIndex++)
         {
             for (int yIndex = y - 1; yIndex <= y + 1; yIndex++)
