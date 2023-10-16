@@ -5,6 +5,7 @@
 1. [Rube Goldberg Machine](assignments/01_machine.md)
 1. [Basics](assignments/02_basics.md)
 1. [Emergence](assignments/03_emergence.md)
+1. [Flight Simulator / Platformer](assignments/04_flight.md)
 
 ## Resources
 Week/Topic | Topic | Sample Project
@@ -12,3 +13,4 @@ Week/Topic | Topic | Sample Project
 Week 3 / Dominos | Creating prefabs with origin at the bottom, instanitating objects in a row, calling a function on collision, applying forces to rigidbodies, changing an object's color with HSV color space, generators of generators, using sine the function | [link](examples/Dominos/Assets)
 Week 4 | Instantiating a grid of prefabs and storing them in a 2D array (see GameOfLife.cs) | [link](examples/emergence/Assets)
 Week 4 | Launching something, OnTriggerEnter, incrementing score, using a custom font | [link](examples/Basics-2/Assets)
+Weeks 5 and 6 | Flight Simulator, using the forward vector to move a game object, review of all previous material | [link](examples/flight/Assets)
