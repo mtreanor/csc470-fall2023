@@ -4,9 +4,11 @@
 Friday October 31st at 12:55pm.
 
 ## Description
-For this game, your grade depends on your ambition! For a B, you have a choice of either creating a flight simulator, or a platformer, and completing at least two "challenges" (details below).
+For this game, your grade depends on your ambition! For a maximum grade of a B (8/10), you have a choice of either creating a flight simulator, or a platformer, and completing at least two "challenges" (details below).
 
 BUT, if you want an A, you need to make a game where you can do BOTH! For example, when the plane "lands", the player will "hop" out of the plane and have some task to complete (e.g. collecting stuff).
+
+Note that the game will also be graded on its playability and other aesthetic properties, so do spend some time trying to make it **good**.
 
 ### Flight Simulator
 Create a flight simulator where the player must collect something in the air in order to win (e.g. flying through a ring, or collecting coins).
