@@ -28,12 +28,12 @@ public class PlayerController : MonoBehaviour
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
-        //--- ROTATION ---
-        //Rotate on the y axis based on the hAxis value
-        //NOTE: If the player isn't pressing left or right, hAxis will be 0 and there will be no rotation
+        // --- ROTATION ---
+        // Rotate on the y axis based on the hAxis value
+        // NOTE: If the player isn't pressing left or right, hAxis will be 0 and there will be no rotation
         transform.Rotate(0, hAxis * rotateSpeed * Time.deltaTime, 0, Space.Self);
 
-        //--- DEALING WITH GRAVITY ---
+        // --- DEALING WITH GRAVITY ---
         if (!cc.isGrounded)
         {
             // If we go in this block of code, cc.isGrounded is false, which means
@@ -46,16 +46,16 @@ public class PlayerController : MonoBehaviour
             yVelocity = -1;
 
 
-            //JUMP. When the player presses space, set yVelocity to the jump force. This will immediately
-            //make the player start moving upwards, and gravity will start slowing the movement upward
-            //and eventually make the player hit the ground (thus landing in the 'if' statment above)
+            // JUMP. When the player presses space, set yVelocity to the jump force. This will immediately
+            // make the player start moving upwards, and gravity will start slowing the movement upward
+            // and eventually make the player hit the ground (thus landing in the 'if' statment above)
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 yVelocity = jumpForce;
             }
         }
 
-        //--- TRANSLATION ---
+        // --- TRANSLATION ---
         // Move the player forward based on the vAxis value
         // Note, If the player isn't pressing up or down, vAxis will be 0 and there will be no movement
         // based on input. However, yVelocity will still move the player downward.

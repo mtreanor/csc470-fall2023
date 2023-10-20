@@ -14,3 +14,4 @@ Week 3 / Dominos | Creating prefabs with origin at the bottom, instanitating obj
 Week 4 | Instantiating a grid of prefabs and storing them in a 2D array (see GameOfLife.cs) | [link](examples/emergence/Assets)
 Week 4 | Launching something, OnTriggerEnter, incrementing score, using a custom font | [link](examples/Basics-2/Assets)
 Weeks 5 and 6 | Flight Simulator, using the forward vector to move a game object, review of all previous material | [link](examples/flight/Assets)
+Weeks 8/9 | Platformer, simulating gravity, jumping, etc. | [link](examples/Platformer)
