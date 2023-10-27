@@ -65,5 +65,37 @@ public class PlayerController : MonoBehaviour
         // This will move the player according to the forward vector and the yVelocity using the
         // CharacterController.
         cc.Move(amountToMove * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            CheckChickenTalking();
+        }
+        
     }
+
+    void CheckChickenTalking()
+    {
+        GameObject[] chickens = GameObject.FindGameObjectsWithTag("villager");
+        float closest = 999999999;
+        GameObject closestChicken = null;
+        for (int i = 0; i < chickens.Length; i++)
+        {
+            float d = Vector3.Distance(transform.position, chickens[i].transform.position);
+            if (d < closest)
+            {
+                closest = d;
+                closestChicken = chickens[i];
+            }
+        }
+
+        if (closestChicken != null)
+        {
+            Vector3 vectorToChicken = (closestChicken.transform.position - transform.position).normalized;
+            float angleToChicken = Vector3.Angle(transform.forward, vectorToChicken);
+            if (angleToChicken < 45)
+            {
+                GameManager.SharedInstance.LaunchDialogue(closestChicken.GetComponent<VillagerScript>());
+            }
+        }
+     }
 }
