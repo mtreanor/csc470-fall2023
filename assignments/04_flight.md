@@ -1,7 +1,7 @@
 # Assignment 4: Flight Simulator OR Platformer OR Both!?!
 
 ## Due
-Friday October 31st at 12:55pm.
+Tuesday October 31st at 12:55pm.
 
 ## Description
 For this game, your grade depends on your ambition! For a maximum grade of a B (8/10), you have a choice of either creating a flight simulator, or a platformer, and completing at least two "challenges" (details below).
