@@ -74,7 +74,7 @@ public class PlaneController : MonoBehaviour
         {
             oldCamPos = newCamPos;
         }
-        cameraObject.transform.position = (newCamPos + oldCamPos) / 2f;
+        cameraObject.transform.position = newCamPos;
         cameraObject.transform.LookAt(transform);
         oldCamPos = newCamPos;
     }

@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+
         if (closestChicken != null)
         {
             Vector3 vectorToChicken = (closestChicken.transform.position - transform.position).normalized;
@@ -98,4 +99,14 @@ public class PlayerController : MonoBehaviour
             }
         }
      }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("coin"))
+        {
+            // Increase score and update UI
+
+            Destroy(other.gameObject);
+        }
+    }
 }
