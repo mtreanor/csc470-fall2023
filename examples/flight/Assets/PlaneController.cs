@@ -14,8 +14,6 @@ public class PlaneController : MonoBehaviour
     float yRotationSpeed = 10f;
     float zRotationSpeed = 40f;
 
-    Vector3 oldCamPos;
-
     public GameObject cameraObject;
 
     // Start is called before the first frame update
@@ -70,13 +68,8 @@ public class PlaneController : MonoBehaviour
 
         // CAMERA
         Vector3 newCamPos = transform.position + -transform.forward * 10 + Vector3.up * 5;
-        if (oldCamPos == null)
-        {
-            oldCamPos = newCamPos;
-        }
         cameraObject.transform.position = newCamPos;
         cameraObject.transform.LookAt(transform);
-        oldCamPos = newCamPos;
     }
 
 
