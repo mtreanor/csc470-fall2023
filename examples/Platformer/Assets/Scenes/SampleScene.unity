@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 1040098828}
   - component: {fileID: 1040098830}
   - component: {fileID: 1040098829}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1217,6 +1217,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7373215065430536185, guid: e53e9069227c041efb300dbb51d96759, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508322977263513409, guid: e53e9069227c041efb300dbb51d96759, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1233,7 +1241,7 @@ GameObject:
   - component: {fileID: 1209520220}
   - component: {fileID: 1209520218}
   - component: {fileID: 1209520221}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1315,7 @@ GameObject:
   - component: {fileID: 1211771084}
   - component: {fileID: 1211771086}
   - component: {fileID: 1211771085}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1458,7 +1466,7 @@ GameObject:
   - component: {fileID: 1442184625}
   - component: {fileID: 1442184627}
   - component: {fileID: 1442184626}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1695,6 +1703,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7373215065430536185, guid: e53e9069227c041efb300dbb51d96759, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508322977263513409, guid: e53e9069227c041efb300dbb51d96759, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1857,6 +1873,14 @@ PrefabInstance:
     - target: {fileID: 7373215065430536185, guid: e53e9069227c041efb300dbb51d96759, type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373215065430536185, guid: e53e9069227c041efb300dbb51d96759, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508322977263513409, guid: e53e9069227c041efb300dbb51d96759, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

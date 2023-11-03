@@ -53,6 +53,24 @@ public class PlayerController : MonoBehaviour
             {
                 yVelocity = jumpForce;
             }
+
+
+
+            float castDistance = 5;
+            Vector3 positionToRayCastFrom = transform.position + Vector3.up * 1.8f;
+            Ray ray = new Ray(positionToRayCastFrom, transform.forward);
+            Debug.DrawRay(positionToRayCastFrom, transform.forward * castDistance, Color.green);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, castDistance))
+            {
+                // If we get in here, we hit something
+                // 'hit' contains information about what we hit
+
+                Destroy(hit.collider.gameObject);
+            } else
+            {
+                Debug.Log("Didn't hit anything with raycast");
+            }
         }
 
         // --- TRANSLATION ---
@@ -99,14 +117,4 @@ public class PlayerController : MonoBehaviour
             }
         }
      }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("coin"))
-        {
-            // Increase score and update UI
-
-            Destroy(other.gameObject);
-        }
-    }
 }
