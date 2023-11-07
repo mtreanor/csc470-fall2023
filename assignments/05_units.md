@@ -14,6 +14,13 @@ Here are some ideas, but feel free to come up with your own:
 - Have the player control one unit and have them need to fight off waves of enemies using special attacks that you select via the UI. In this case you would need meters to represent health.
 - Have the player be able to place various types of buildings or zones on a grid. Have the placed areas update their stats over time based on the distance from the various other types of placed buildings.
 
+## Grading
+To receive an A, you must make use of the following:
+- Unity's Animator
+- Unity's ParticleSystem
+- The Singleton pattern
+- Object Pooling
+
 ## Graduate Student Assignment
 As this is a pretty open ended project, I am not expecting anything specific from graduate students. However, the quality of the game, and the code will be evaluated more critically.
 
