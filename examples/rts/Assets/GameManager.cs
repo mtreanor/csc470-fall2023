@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,11 +19,14 @@ public class GameManager : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 999999, ~LayerMask.NameToLayer("ground")))
+            if (Physics.Raycast(ray, out hit, 999999))
             {
-                // If we get in here, we hit something! And the 'hit' object
-                // contains info about what we hit.
-                Instantiate(unitPrefab, hit.point, Quaternion.identity);
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("ground"))
+                {
+                    // If we get in here, we hit something! And the 'hit' object
+                    // contains info about what we hit.
+                    Instantiate(unitPrefab, hit.point, Quaternion.identity);
+                }
             }
         }
     }
