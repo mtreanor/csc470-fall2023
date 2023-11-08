@@ -56,5 +56,6 @@ public class GameManager : MonoBehaviour
     }
 }
 
-
+// IGNORE THIS FOR NOW. We are gonna need this line of code to allow clicks to
+// move through UI elements.
 //&& !EventSystem.current.IsPointerOverGameObject()
