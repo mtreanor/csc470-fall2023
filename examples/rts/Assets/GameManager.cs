@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static GameManager SharedInstance;
+    public List<UnitScript> units = new List<UnitScript>();
     public GameObject unitPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    UnitScript selectedUnit;
 
+    
+    void Awake()
+    {
+        if (SharedInstance != null)
+        {
+            Debug.Log("Why is there more than one GameManager!?!?!?!");
+        }
+        SharedInstance = this;
     }
 
     // Update is called once per frame
@@ -25,10 +34,25 @@ public class GameManager : MonoBehaviour
                 {
                     // If we get in here, we hit something! And the 'hit' object
                     // contains info about what we hit.
-                    Instantiate(unitPrefab, hit.point, Quaternion.identity);
+                    if (selectedUnit != null)
+                    {
+                        selectedUnit.SetTarget(hit.point);
+                    }
                 }
             }
         }
+    }
+
+    public void SelectUnit(UnitScript unit)
+    {
+        // Deselect any units that think they are selected
+        foreach (UnitScript u in units) {
+            u.selected = false;
+            u.SetUnitColor();
+        }
+        selectedUnit = unit;
+        selectedUnit.selected = true;
+        selectedUnit.SetUnitColor();
     }
 }
 
