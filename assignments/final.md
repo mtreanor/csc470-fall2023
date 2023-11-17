@@ -34,6 +34,10 @@ A timeline of what you need to accomplish and by when to complete your game on t
 
 Be sure to spend time on this. The document should be approximately "2-3 pages", and you should **include it in a README.md file in your your project directory named 'final'**.
 
+You should see your design document when you go to:
+
+  *http://github.com/<your github username>/csc470-fall2023/assignments/final*
+
 ## Check ins each class (20%)
 Each class I will check in with you and assess your progress on your project. Note that these assessments are worth 20% of your grade!
 
@@ -60,6 +64,6 @@ and located in the "games" folder of your local github repository. To push it up
 
 If everything worked, you should be able to play your game by going to:
 
-  http://(your git username).github.io/csc470-fall2023/games/final/
+  *http://(your git username).github.io/csc470-fall2023/games/final/*
 
 If exporting your game to WebGL doesn't work, build your game for either Mac or  and attempt to upload that to GitHub in your Assets folder. If your game is too large to upload, include a file to a link to download the game (you can just put it on Google Drive, Dropbox, or some other such platform).
