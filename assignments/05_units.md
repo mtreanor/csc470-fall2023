@@ -19,7 +19,7 @@ To receive an A, you must make use of the following:
 - Unity's Animator
 - Unity's ParticleSystem
 - The Singleton pattern
-- Object Pooling
+- Object Pooling OR Observer Pattern
 
 ## Graduate Student Assignment
 As this is a pretty open ended project, I am not expecting anything specific from graduate students. However, the quality of the game, and the code will be evaluated more critically.
