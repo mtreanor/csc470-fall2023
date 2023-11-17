@@ -8,6 +8,7 @@ public class UnitScript : MonoBehaviour
 
     public Renderer bodyRenderer;
     public CharacterController cc;
+    public Animator animator;
 
     public Color selectedColor;
     public Color hoverColor;
@@ -36,15 +37,27 @@ public class UnitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 amountToMove = Vector3.zero;
+
         if (hasTarget)
         {
             Vector3 vectorToTarget = (target - transform.position).normalized;
-            cc.Move(vectorToTarget * moveSpeed * Time.deltaTime);
+
+            float step = 5 * Time.deltaTime;
+            Vector3 rotatedTowardsVector = Vector3.RotateTowards(transform.forward, vectorToTarget, step, 1);
+            rotatedTowardsVector.y = 0;
+            transform.forward = rotatedTowardsVector;
+
+            amountToMove = transform.forward * moveSpeed * Time.deltaTime;
+            cc.Move(amountToMove);
+
             if (Vector3.Distance(transform.position, target) < 0.5f)
             {
                 hasTarget = false;
             }
         }
+
+        animator.SetFloat("speed", amountToMove.magnitude);
     }
 
     public void SetTarget(Vector3 t)

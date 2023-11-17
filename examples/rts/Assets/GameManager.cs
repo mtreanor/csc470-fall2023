@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
+    public event Action<UnitScript> UnitSelectedHappened;
 
     public static GameManager SharedInstance;
     public List<UnitScript> units = new List<UnitScript>();
@@ -11,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     UnitScript selectedUnit;
 
-    
     void Awake()
     {
         if (SharedInstance != null)
@@ -53,6 +55,8 @@ public class GameManager : MonoBehaviour
         selectedUnit = unit;
         selectedUnit.selected = true;
         selectedUnit.SetUnitColor();
+
+        UnitSelectedHappened?.Invoke(unit);
     }
 }
 
