@@ -8,11 +8,11 @@ Also, have your game have some sort of theme, or some sort of story (even if it 
 - Something that ends the gameplay and brings the player back to the main menu. Usually there would be a way to win, and a way to lose
 - During gameplay, there should be no way to “get stuck”
 - During gameplay, your world should be bounded (no falling off of cliffs forever, or flying off into infinity)
-- (Audio?)[https://www.youtube.com/results?search_query=Unity+audio]
+- [Audio?](https://www.youtube.com/results?search_query=Unity+audio)
 
 Finally, try your best to get rid of anything that isn’t directly adding positively to the gameplay experience. This means that there shouldn’t be unnecessary long corridors, or hard to find collectables, etc. I.e. spend some time on design.
 
-# Final Projects Due Dates
+# Final Project Due Dates
 ## Design Document (20%)
 ### Due 11/28/23
 Your design document should include:
