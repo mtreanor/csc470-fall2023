@@ -1,7 +1,7 @@
 # Assignment 5: Resource Management and Managing Units
 
 ## Due
-Tuesday November 21st at 12:55pm.
+Tuesday November 28th at 12:55pm.
 
 ## Description
 For this assignment you will explore using the mouse and user interface elements to make a game. Many genres, such as real time strategy (e.g. StarCraft), simulation (e.g. Cities: Skylines), MOBA (League of Legends), and more use this mode of interaction. While there isn't anywhere near enough time to make a full game those, you do now have the ability to make a small game like them!

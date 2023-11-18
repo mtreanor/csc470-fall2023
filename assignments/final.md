@@ -14,7 +14,7 @@ Finally, try your best to get rid of anything that isn’t directly adding posit
 
 # Final Project Due Dates
 ## Design Document (20%)
-### Due 11/28/23
+### Due 12/1/23
 Your design document should include:
 
 A detailed plan for the game. This will involve describing all of the following components:
@@ -35,9 +35,9 @@ A timeline of what you need to accomplish and by when to complete your game on t
 Be sure to spend time on this. The document should be approximately "2-3 pages", and you should **include it in a README.md file in your your project directory named 'final'**.
 
 You should see your design document when you go to:
-
-  *http://github.com/(your github username)/csc470-fall2023/assignments/final*
-
+```
+  http://github.com/(your github username)/csc470-fall2023/assignments/final
+```
 ## Check ins each class (20%)
 Each class I will check in with you and assess your progress on your project. Note that these assessments are worth 20% of your grade!
 
@@ -63,7 +63,7 @@ Submit your project to github. Make sure your Unity project is titled "final"
 and located in the "games" folder of your local github repository. To push it up to github, open Github Desktop, commit your changes (you need to enter a comment in the field on the bottom left of the screen), and click the "Push origin" button near the top middle of the screen.
 
 If everything worked, you should be able to play your game by going to:
-
-  *http://(your git username).github.io/csc470-fall2023/games/final/*
-
+```
+  http://(your git username).github.io/csc470-fall2023/games/final/
+```
 If exporting your game to WebGL doesn't work, build your game for either Mac or  and attempt to upload that to GitHub in your Assets folder. If your game is too large to upload, include a file to a link to download the game (you can just put it on Google Drive, Dropbox, or some other such platform).
