@@ -7,6 +7,7 @@
 1. [Emergence](assignments/03_emergence.md)
 1. [Flight Simulator / Platformer](assignments/04_flight.md)
 1. [Resources and Unit Management](assignments/05_units.md)
+1. [Final](assignments/final.md)
 
 ## Resources
 Sample Project | Topic | Sample Project
