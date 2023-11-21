@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
-    public event Action<UnitScript> UnitSelectedHappened;
+    public static event Action<UnitScript> UnitSelectedHappened;
 
     public static GameManager SharedInstance;
     public List<UnitScript> units = new List<UnitScript>();
@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(EventSystem.current.IsPointerOverGameObject());
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

@@ -159,6 +159,7 @@ MonoBehaviour:
   bodyRenderer: {fileID: 2074283125316962526}
   cc: {fileID: 5173324434822371003}
   animator: {fileID: 2252544055819023528}
+  sparklePrefab: {fileID: 1057738423266685518, guid: f719c42fa9e864853b1573fe52847bda, type: 3}
   selectedColor: {r: 1, g: 0.50181097, b: 0, a: 0}
   hoverColor: {r: 0.9972541, g: 1, b: 0.4292453, a: 0}
   selected: 0

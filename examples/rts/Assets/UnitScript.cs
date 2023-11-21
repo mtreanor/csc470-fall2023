@@ -10,6 +10,8 @@ public class UnitScript : MonoBehaviour
     public CharacterController cc;
     public Animator animator;
 
+    public GameObject sparklePrefab;
+
     public Color selectedColor;
     public Color hoverColor;
     Color defaultColor;
@@ -22,11 +24,32 @@ public class UnitScript : MonoBehaviour
     Vector3 target;
     bool hasTarget = false;
 
+
+    private void OnEnable()
+    {
+        GameManager.UnitSelectedHappened += CreateSparkle;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.UnitSelectedHappened -= CreateSparkle;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         defaultColor = bodyRenderer.material.color;
         GameManager.SharedInstance.units.Add(this);
+    }
+
+    void CreateSparkle(UnitScript selectedUnit)
+    {
+        // Instantiate a sparkle if we arent the selected unit
+        if (selectedUnit != this)
+        {
+            GameObject sparkle = Instantiate(sparklePrefab, transform.position + Vector3.up * 3, Quaternion.identity);
+            Destroy(sparkle, 5);
+        }
     }
 
     private void OnDestroy()
@@ -57,7 +80,13 @@ public class UnitScript : MonoBehaviour
             }
         }
 
-        animator.SetFloat("speed", amountToMove.magnitude);
+        //animator.SetFloat("speed", amountToMove.magnitude);
+        bool walking = false;
+        if (amountToMove.magnitude > 0)
+        {
+            walking = true;
+        }
+        animator.SetBool("walking", walking);
     }
 
     public void SetTarget(Vector3 t)

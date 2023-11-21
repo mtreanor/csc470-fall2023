@@ -5,17 +5,16 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public GameManager gm;
     public TMP_Text nameText;
 
     private void OnEnable()
     {
-        gm.UnitSelectedHappened += UpdateNameText;
+        GameManager.UnitSelectedHappened += UpdateNameText;
     }
 
     private void OnDisable()
     {
-        gm.UnitSelectedHappened -= UpdateNameText;
+        GameManager.UnitSelectedHappened -= UpdateNameText;
     }
 
     // Start is called before the first frame update
