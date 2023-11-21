@@ -17,4 +17,4 @@ Week 4 | Instantiating a grid of prefabs and storing them in a 2D array (see Gam
 Week 4 | Launching something, OnTriggerEnter, incrementing score, using a custom font | [link](examples/Basics-2/Assets)
 Weeks 5 and 6 | Flight Simulator, using the forward vector to move a game object, review of all previous material | [link](examples/flight/Assets)
 Weeks 8/9 | Platformer, simulating gravity, jumping, detecting closest npc and whether or not the player is facing them | [link](examples/Platformer)
-Later Weeks | Selecting units via raycasting, Unit management via GameManager | [link](examples/rts)
+Later Weeks | Selecting units via raycasting, Unit management via GameManager, Oberver Pattern, ParticleEffects | [link](examples/rts)
