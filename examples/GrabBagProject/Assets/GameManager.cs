@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +14,23 @@ public class GameManager : MonoBehaviour
     public GameObject secondPanel;
     public GameObject thirdPanel;
 
+    public Image fadeImage;
+
+    public RawImage catImage;
+
+    public TMP_Text clickText;
+
+    string catURL = "https://www.fearfreehappyhomes.com/wp-content/uploads/2021/10/Marci-cat-Maggie-1200x797.jpg";
+
     // Start is called before the first frame update
     void Start()
     {
         //StartCoroutine(FirstDemoOfCoroutine());
-        StartCoroutine(PanelSequence());
+        //StartCoroutine(PanelSequence());
+
+        clickText.text = PlayerPrefs.GetInt("clickCount").ToString();
+
+        StartCoroutine(fadeIn());
 
     }
 
@@ -25,6 +41,33 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Time is going by");
         }
+    }
+
+    IEnumerator fadeIn()
+    {
+        fadeImage.gameObject.SetActive(true);
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, 1);
+        while (fadeImage.color.a > 0)
+        {
+            float newAlpha = fadeImage.color.a - 0.5f * Time.deltaTime;
+            fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, newAlpha);
+            yield return null;
+        }
+        fadeImage.gameObject.SetActive(false);
+
+        StartCoroutine(DisplayCat());
+    }
+
+    IEnumerator DisplayCat()
+    {
+        UnityWebRequest www = UnityWebRequest.Get(catURL);
+        www.downloadHandler = new DownloadHandlerTexture();
+
+        yield return www.SendWebRequest();
+
+        Texture2D texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+        catImage.texture = texture;
+
     }
 
     IEnumerator FirstDemoOfCoroutine()
@@ -60,7 +103,7 @@ public class GameManager : MonoBehaviour
         secondPanel.SetActive(false);
         thirdPanel.SetActive(true);
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
 
         thirdPanel.SetActive(false);
 
