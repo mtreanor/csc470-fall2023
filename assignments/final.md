@@ -36,7 +36,7 @@ Be sure to spend time on this. The document should be approximately "2-3 pages",
 
 You should see your design document when you go to:
 ```
-  http://github.com/(your github username)/csc470-fall2023/assignments/final
+https://github.com/(your github username)/csc470-fall2023/tree/main/assignments/final
 ```
 ## Check ins each class (20%)
 Each class I will check in with you and assess your progress on your project. Note that these assessments are worth 20% of your grade!
