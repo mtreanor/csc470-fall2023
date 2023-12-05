@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
 
     UnitScript selectedUnit;
 
+    Grain grainEffect;
+    public PostProcessProfile ppp;
+
     void Awake()
     {
         if (SharedInstance != null)
@@ -22,6 +26,11 @@ public class GameManager : MonoBehaviour
             Debug.Log("Why is there more than one GameManager!?!?!?!");
         }
         SharedInstance = this;
+    }
+
+    private void Start()
+    {
+        ppp.TryGetSettings<Grain>(out grainEffect);
     }
 
     // Update is called once per frame
@@ -57,10 +66,20 @@ public class GameManager : MonoBehaviour
         selectedUnit.selected = true;
         selectedUnit.SetUnitColor();
 
+        StartCoroutine(selectionEffect());
+
         UnitSelectedHappened?.Invoke(unit);
     }
-}
 
-// IGNORE THIS FOR NOW. We are gonna need this line of code to allow clicks to
-// move through UI elements.
-//&& !EventSystem.current.IsPointerOverGameObject()
+    IEnumerator selectionEffect()
+    {
+        // 1. set Grain's intensity up to 1
+        grainEffect.intensity.Override(1);
+
+        // 2. Wait for a second
+        yield return new WaitForSeconds(1);
+
+        // 3. set Grain's intensity to 0
+        grainEffect.intensity.Override(0);
+    }
+}

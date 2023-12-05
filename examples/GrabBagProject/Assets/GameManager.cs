@@ -67,7 +67,6 @@ public class GameManager : MonoBehaviour
 
         Texture2D texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
         catImage.texture = texture;
-
     }
 
     IEnumerator FirstDemoOfCoroutine()
